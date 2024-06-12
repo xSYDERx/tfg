@@ -1,0 +1,36 @@
+body {
+    background-color: lightgrey;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+main a {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5% 1.75%;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+
+footer p {
+    align-self: center;
+    justify-self: center;
+}
+
+footer img {
+    width: 4%;
+
+}
