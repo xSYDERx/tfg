@@ -1,0 +1,245 @@
+/* VARIABLES */
+html {
+    padding: 0;
+  }
+  /* HEADER */
+  header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2%;
+    font-size: 12px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 96%;
+    display: flex;
+  }
+  button {
+    display: none;
+    border: none;
+    background-color: #ffffff;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  button img {
+    width: 40px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* items del menu */
+  nav ul li {
+    background-color: #ffffff;
+  }
+  /* enlaces del menu */
+  nav ul a {
+    display: block;
+    color: #5e5e5e;
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  /* items del menu */
+  nav ul li {
+    display: flex;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  /* efecto al pasar el ratón por los items del menu */
+  nav ul li:hover a {
+    transition: all 0.2s ease-in-out;
+    color: #ff2424;
+    border-bottom: red 1px solid;
+  }
+  /* menu desplegable */
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    padding: 0;
+  }
+  /* items del menu desplegable */
+  nav ul ul li {
+    float: none;
+    width: 150px;
+  }
+  /* enlaces de los items del menu desplegable */
+  nav ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+  }
+  /* items del menu desplegable al pasar el ratón */
+  nav ul li:hover > ul {
+    display: block;
+  }
+  #user a {
+    color: red;
+  }
+  #user:hover a {
+    transition: all 0.2s ease-in-out;
+    color: #ffc400;
+    border-bottom: #ffc400 1px solid;
+  }
+  #logo_club {
+    width: 100px;
+    float: left;
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    button {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+    header > div {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    nav {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    nav.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: block;
+      width: 100%;
+    }
+    nav ul ul {
+      position: static;
+      display: none;
+    }
+    nav ul ul li {
+      display: block;
+      width: 100%;
+    }
+    nav ul ul ul {
+      display: none;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    nav ul ul li {
+      border-top: 1px solid #ccc;
+    }
+  }
+  /* HEADER */
+  /* FOOTER */
+  footer {
+    background-image: url("../assets/img/footer-cbsglupglup.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    padding-top: 20%;
+    padding-bottom: 3%;
+    font-size: 12px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    bottom: 0;
+    width: 100%;
+  }
+  #redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #redes img {
+    width: 60px;
+    margin: 10px;
+  }
+  #legal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+  #legal a {
+    color: white;
+    text-decoration: none;
+  }
+  #logos img {
+    margin-top: 5%;
+    width: 200px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #logos {
+    margin-bottom: 5%;
+  }
+  /* FOOTER */
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    /* Hide the button by default */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    /* Start hidden with opacity 0 */
+    transition: opacity 0.3s ease;
+    /* Transition for opacity */
+  }
+  #scrollToTopBtn.show {
+    display: flex;
+    /* Use flex to center the arrow */
+    opacity: 1;
+    /* Visible with opacity 1 */
+  }
+  #scrollToTopBtn:hover {
+    background-color: darkblue;
+  }
+  
