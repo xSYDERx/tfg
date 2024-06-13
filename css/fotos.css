@@ -1,0 +1,80 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding: 2%;    
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+#title img {
+    width: 80%;
+    padding: 0;
+}
+
+@media screen and (max-width: 899px) {
+    img {
+        width: 100%;
+    }
+
+}
+            
+@media screen and (min-width: 900px) {
+                .gallery {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 80%;
+                    height: 500px;
+                }
+                .gallery img {
+                    display: none;
+                }
+                .item, .item-2 {
+                    flex: 1;
+                    height: 100%;
+                }
+                
+                .item, .item-2 {
+                    background-position: center;
+                    background-size: cover;
+                    transition: flex 0.8s ease;
+                }
+                
+                .item:hover, .item-2:hover {
+                    flex: 2.5;
+                }
+                
+                .item:nth-child(1) {
+                    background-image: url(../assets/img/bautizo.jpg);
+                }
+                
+                .item:nth-child(2) {
+                    background-image: url(../assets/img/buceo2.png);
+                }
+                
+                .item:nth-child(3) {
+                    background-image: url(../assets/img/Caballito.jpg);
+                }
+                
+                .item-2:nth-child(1) {
+                    background-image: url(../assets/img/foto_pulpo.jpg);
+                }
+                
+                .item-2:nth-child(2) {
+                    background-image: url(../assets/img/luteum2.jpg);
+                }
+                
+                .item-2:nth-child(3) {
+                    background-image: url(../assets/img/rizos_y_buzos.jpg);
+                }
+                
+}

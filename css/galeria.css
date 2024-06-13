@@ -18,3 +18,23 @@
     flex-shrink: 0;
     display: block;
 }
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.boton {
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -48,4 +48,11 @@ body {
     background-color: #ffffff;
     border: 3px solid #ff0000;
   }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #2e69ad;
+    font-weight: 650;
+  }
   
