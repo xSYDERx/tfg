@@ -16,7 +16,7 @@ body {
     width: 96%;
     display: flex;
   }
-  button {
+  #menuButton {
     display: none;
     border: none;
     background-color: #ffffff;
@@ -25,7 +25,7 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
   }
-  button img {
+  #menuButton img {
     width: 40px;
   }
   nav {
