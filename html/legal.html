@@ -1,35 +1,41 @@
-<!doctype html>
-<html class="no-js" lang="es">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CBS Glup Glup: Actividades de buceo recr</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-  
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" href="../img/logoclub.ico">
-  
-    <link rel="stylesheet" href="../css/legales.css">
-  
-    <meta name="theme-color" content="#fafafa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/header_y_footer.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>CBS Glup Glup</title>
+  <link rel="shortcut icon" href="../assets/img/logoclub.ico">
+</head>
+</head>
   </head>
 
 <body>
-    <header>
-      <nav>
-        <div>
-          <a href="../index.html">
-            <img src="../img/LOGOCBS.jpg" alt="">
-          </a>
-        </div>
-      <nav>
-    </header>
+   <!--HEADER-->
+   <header>
+    <button id="menuButton"><img src="../assets/svg/blue_bg_menu.svg" alt=""></button>
+    <div>
+      <a href="../index.html" id="club_a">
+        <img src="../assets/img/logo_cbs.png" alt="Logo club" id="logo_club">
+      </a>
+    </div>
+    <nav id="mainMenu">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="">El club</a></li>
+        <li><a href="./galeria.html">Galería</a>
+        </li>
+        <li><a href="./tienda.html">Tienda</a>
+        </li>
+        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./actividades.html">Realiza tu reserva</a></li>
+        <li id="user"><a href="">Login</a></li>
+        <li id="user"><a href="">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--HEADER-->
 
     <h1>Aviso legal</h1>
 
@@ -45,24 +51,33 @@
 
     </div>
 
+    <!--FOOTER-->
     <footer>
-      <div>
-        <img src="../img/logoclub.png" alt="Logo circular del centro de buceo">
-        <h2>REDES SOCIALES & CONTACTO</h2>
-        <p id="wa">&#xe905; +34 619 33 86 03</p>
-        <p id="mail">&#xe902; glup.glup@hotmail.com</p>
-        <p><a href="https://www.youtube.com/@JoseGlup" target="_blank" id="yt">&#xe904; JoseGlup</a></p>
-        <p><a href="https://www.facebook.com/JoseGlupGlup" target="_blank" id="fb">&#xe900; Jose Glup</a></p>
-        <p><a href="https://www.instagram.com/cbsglupglup/" target="_blank" id="ig">&#xe901; @cbsglupglup</a></p>
-        <h2>UBICACIÓN</h2>
-        <p>C/ Fragata Cervantes nº 21, 18730 Calahonda, Granada</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d799.755858286929!2d-3.418966589219292!3d36.697974790265896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1678649310741!5m2!1ses!2ses" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div id="legal">
-          <p>© 2023 CBS Glup Glup</p>
-          <a href="./legal.html">Aviso legal</a>
-          <a href="./cookies.html">Política de cookies</a>
-          <a href="./privacity.html">Política de privacidad</a>
+      <section id="fotos_footer">
+        <img src="" alt="">
+        <div id="logos">
+          <img src="../assets/img/instructor_trainer-removebg-preview.png" alt="logo acuc">
+          <img src="../assets/img/Cressi_pittogramma_neg.png" alt="logo cressi">
         </div>
-      </div>
+      </section>
+        <section>
+          <h2>Nuestras Redes sociales</h2>
+          <div id="redes">
+            <a href="https://www.youtube.com/@JoseGlup"><img src="../assets/svg/youtube-svgrepo-com.svg" alt="youtube"></a>
+            <a href="https://www.instagram.com/cbsglupglup/"><img src="../assets/svg/Instagram_logo_2016.svg" alt="instagram"></a>
+            <a href="https://www.facebook.com/cbglupglup"><img src="../assets/svg/Facebook_f_logo_(2019).svg" alt="facebook"></a>
+            <a href="https://www.tiktok.com/@cbsglupglup?lang=es"><img src="../assets/svg/tiktok-logo-logo-svgrepo-com.svg" alt="tiktok"></a>
+          </div>
+        </section>
+        <div id="legal">
+          <a href="./cookies.html">Política de cookies</a>
+          <a href="./legal.html">Aviso legal</a>
+          <a href="./privacidad.html">Política de privacidad</a>
+          </div>
+        <p>© 2024 CBS Glup Glup</p>
     </footer>
+    <button id="scrollToTopBtn">&#8679;</button>
+
+    <script src="../js/gotopbutton.js"></script>
+    <script src="../js/burgermenu.js"></script>
 </body>

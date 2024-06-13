@@ -1,0 +1,32 @@
+
+  /* ---------------------------- */
+
+
+  body > div h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #003572;
+    font-weight: 650;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #2e69ad;
+    font-weight: 650;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  p {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  /*-----------------------------*/
+  
