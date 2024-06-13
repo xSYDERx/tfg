@@ -1,7 +1,7 @@
 /* VARIABLES */
-html {
-    padding: 0;
-  }
+body {
+    margin: 0;
+}
   /* HEADER */
   header {
     background-color: #ffffff;
@@ -38,11 +38,11 @@ html {
     margin: 0;
     padding: 0;
   }
-  /* items del menu */
+
   nav ul li {
     background-color: #ffffff;
   }
-  /* enlaces del menu */
+
   nav ul a {
     display: block;
     color: #5e5e5e;
@@ -56,42 +56,20 @@ html {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  /* items del menu */
+
   nav ul li {
     display: flex;
     float: left;
     margin: 0;
     padding: 0;
   }
-  /* efecto al pasar el ratón por los items del menu */
+
   nav ul li:hover a {
     transition: all 0.2s ease-in-out;
     color: #ff2424;
     border-bottom: red 1px solid;
   }
-  /* menu desplegable */
-  nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    padding: 0;
-  }
-  /* items del menu desplegable */
-  nav ul ul li {
-    float: none;
-    width: 150px;
-  }
-  /* enlaces de los items del menu desplegable */
-  nav ul ul a {
-    line-height: 120%;
-    padding: 10px 15px;
-  }
-  /* items del menu desplegable al pasar el ratón */
-  nav ul li:hover > ul {
-    display: block;
-  }
+
   #user a {
     color: red;
   }
@@ -104,13 +82,13 @@ html {
     width: 100px;
     float: left;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     header {
       display: flex;
       flex-direction: column;
       position: relative;
     }
-    button {
+    #menuButton {
       display: block;
       position: absolute;
       top: 30px;
@@ -131,6 +109,7 @@ html {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding-bottom: 4%;
     }
     nav.open {
       opacity: 1;
@@ -162,6 +141,8 @@ html {
     nav ul ul li {
       border-top: 1px solid #ccc;
     }
+
+
   }
   /* HEADER */
   /* FOOTER */
@@ -223,21 +204,21 @@ html {
     font-size: 24px;
     cursor: pointer;
     display: none;
-    /* Hide the button by default */
+
     align-items: center;
     justify-content: center;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    /* Start hidden with opacity 0 */
+
     transition: opacity 0.3s ease;
-    /* Transition for opacity */
+
   }
   #scrollToTopBtn.show {
     display: flex;
-    /* Use flex to center the arrow */
+
     opacity: 1;
-    /* Visible with opacity 1 */
+
   }
   #scrollToTopBtn:hover {
     background-color: darkblue;
