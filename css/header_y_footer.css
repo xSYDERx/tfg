@@ -6,15 +6,19 @@ body {
   header {
     background-color: #ffffff;
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     text-align: center;
-    padding: 2%;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-size: 12px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 96%;
-    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade sombra opcional */
   }
   #menuButton {
     display: none;
@@ -87,11 +91,14 @@ body {
       display: flex;
       flex-direction: column;
       position: relative;
+      top: 0;
+      padding: 2%;
+      position: sticky;
     }
     #menuButton {
       display: block;
       position: absolute;
-      top: 30px;
+      top: 35%;
       left: 10px;
     }
     header > div {
