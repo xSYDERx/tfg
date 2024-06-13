@@ -43,17 +43,35 @@
         <section id="ubi">
           <div class="text">
             <h2>¿Dónde nos encontramos?</h2>
-            <p>Nuestras instalaciones se encuentran en Calahonda, cerca de la playa. Un local equipado con vestuarios, baños y duchas, una zona humeda para el lavado y una zona de mostrador.<br><br>También disponemos de aparcamiento en la puerta, lo que facilita venir a la actividad sin tener que preocuparse por su vehículo, ya que no será necesario usarlo para desplazarnos al punto de inmersion, puesto que disponemos de nuestra "GluGluNeta", una furgoneta perfectamente preparada para el agua y en la que os transportamos al Embarcadero de Calahonda, punto donde se realiza el buceo</p>
+            <p>Nuestras instalaciones se encuentran en <strong>Calahonda</strong>, cerca de la playa. Un local equipado con vestuarios, baños y duchas, una zona humeda para el lavado y una zona de mostrador.<br><br>También disponemos de aparcamiento en la puerta, lo que facilita venir a la actividad sin tener que preocuparse por su vehículo, ya que no será necesario usarlo para desplazarnos al punto de inmersion, puesto que disponemos de nuestra <strong>"GluGluNeta"</strong>, una furgoneta perfectamente preparada para el agua y en la que os transportamos al <strong> Embarcadero de Calahonda</strong>, punto donde se realiza el buceo</p>
           </div>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0349983752794!2d-3.421394689650262!3d36.69769687216081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71a3b2f52b2889%3A0xd23b5374a7371582!2sCBS%20GlupGlup!5e0!3m2!1ses!2ses!4v1718289296246!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </section>
         <section id="form">
-          <h2>¿Tienes dudas?
-            <br>
-            ¡No dudes en contactar con nosotros!</h2>
-          <form action=""></form>
+          <div class="text">
+            <h2>¿Necesitas más información? ¡Contacta con nosotros!</h2>
+            <p>Puedes hacerlo via <a href="https://wa.me/34619338606" id="whatsapp">Whatsapp</a> o a través del siguiente formulario de contacto via correo electrónico.
+            ¡Te responderemos lo antes posible!</p>
+          </div>
+          <div class="container">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
         </section>
   </main>
 
@@ -86,6 +104,23 @@
 
       <script src="../js/gotopbutton.js"></script>
       <script src="../js/burgermenu.js"></script>
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("72n40sd0PTYUlrBOm");  // Reemplaza "TU_USER_ID" con tu ID de usuario de EmailJS
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_b1qih8l', 'template_jaxifql', this)
+                .then(function() {
+                    alert('Correo enviado correctamente!');
+                }, function(error) {
+                    alert('Error al enviar el correo: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 
 </body>
 </html>
