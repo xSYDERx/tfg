@@ -158,7 +158,7 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
         ?>
     </select><br>
     
-    <input type="submit" name="realizar_pago" value="Realizar el pago" style="margin-bottom: 5%;">
+    <input type="submit" name="realizar_pago" value="Realizar el pago" style="margin-bottom: 5%; margin-top:5%">
     <input type="submit" name="reservar_sin_pago" value="Reservar sin realizar el pago">
 </form>
 </div>
