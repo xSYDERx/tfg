@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 <header>
@@ -71,19 +72,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
             </nav>
             </header>
-    <h1>Login</h1>
 
     <?php if (isset($error)) : ?>
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>
 
-    <form method="post" action="">
-        <label for="login">Usuario:</label>
-        <input type="text" name="login" required><br>
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" required><br>
-        <input type="submit" value="Iniciar sesión">
-    </form>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form method="post" action="">
+            <label for="login">Usuario:</label>
+            <input type="text" name="login" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" required>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+        <p>¿Aún no tienes cuenta? ¡Registrate!</p>
+    </div>
     <footer>
         <section id="fotos_footer">
           <img src="" alt="">

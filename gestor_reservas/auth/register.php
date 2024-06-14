@@ -45,33 +45,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/register.css">
 </head>
 
 <body>
-    <h1>Registro de Usuario</h1>
-    <?php echo $mensaje; ?>
-    <form action="" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" required><br>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" required><br>
-
-        <label for="email">Correo Electronico:</label>
-        <input type="text" name="email" required><br>
-
-        <label for="login">Login:</label>
-        <input type="text" name="login" required><br>
-
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" required><br>
-
-        <input type="submit" value="Registrar">
-    </form>
+<header>
+            <button id="menuButton"><img src="../../assets/svg/blue_bg_menu.svg" alt=""></button>
+            <div>
+            <a href="../../index.html" id="club_a">
+            <img src="../../assets/img/logo_cbs.png" alt="Logo club" id="logo_club">
+            </a>
+            </div>
+            <nav id="mainMenu">
+            <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../html/who.html">El club</a></li>
+            <li><a href="../../html/galeria.html">Galería</a>
+            </li>
+            <li><a href="../../html/tienda.html">Tienda</a>
+            </li>
+            <li><a href="../../html/contacto.html">Contacto</a></li>
+            <li><a href="../../html/actividades.html">Realiza tu reserva</a></li>
+            <li id="user"><a href="">Inicio de sesión</a></li>
+            </ul>
+            </nav>
+            </header>
+            <?php echo $mensaje; ?>
+            <div class="register-container">
+        <h1>Registro</h1>
+        <form action="" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="email" required>
+            <label for="login">Login:</label>
+            <input type="text" name="login" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" required>
+            <input type="submit" value="Registrar">
+        </form>
     <footer>
-    <p>Gestor de reservas BETA </p>
-    </footer>
+        <section id="fotos_footer">
+          <img src="" alt="">
+          <div id="logos">
+            <img src="../../assets/img/instructor_trainer-removebg-preview.png" alt="logo acuc">
+            <img src="../../assets/img/Cressi_pittogramma_neg.png" alt="logo cressi">
+          </div>
+        </section>
+          <section>
+            <h2 id="redes_title">Nuestras Redes sociales</h2>
+            <div id="redes">
+              <a href="https://www.youtube.com/@JoseGlup"><img src="../assets/svg/youtube-svgrepo-com.svg" alt="youtube"></a>
+              <a href="https://www.instagram.com/cbsglupglup/"><img src="../assets/svg/Instagram_logo_2016.svg" alt="instagram"></a>
+              <a href="https://www.facebook.com/cbglupglup"><img src="../assets/svg/Facebook_f_logo_(2019).svg" alt="facebook"></a>
+              <a href="https://www.tiktok.com/@cbsglupglup?lang=es"><img src="../assets/svg/tiktok-logo-logo-svgrepo-com.svg" alt="tiktok"></a>
+            </div>
+          </section>
+          <div id="legal">
+            <a href="../../html/cookies.html">Política de cookies</a>
+            <a href="../../html/legal.html">Aviso legal</a>
+            <a href="../../html/privacidad.html">Política de privacidad</a>
+            </div>
+          <p>© 2024 CBS Glup Glup</p>
+      </footer>
+      <button id="scrollToTopBtn">&#8679;</button>
+
+      <script src="../../js/gotopbutton.js"></script>
+      <script src="../../js/burgermenu.js"></script>
+
 </body>
 
 </html>
