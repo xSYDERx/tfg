@@ -170,6 +170,7 @@ body {
     letter-spacing: 1px;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
   }
   #redes {
     display: flex;
