@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <nav id="mainMenu">
             <ul>
             <li><a href="../../index.html">Inicio</a></li>
-            <li><a href="../html/who.html">El club</a></li>
+            <li><a href="../../html/who.html">El club</a></li>
             <li><a href="../../html/galeria.html">Galería</a>
             </li>
             <li><a href="../../html/tienda.html">Tienda</a>
