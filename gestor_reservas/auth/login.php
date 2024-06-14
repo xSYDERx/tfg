@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password . $salt, $storedPassword)) {
             // Autenticación exitosa
             $_SESSION['login'] = $login;
-            header('Location: secure.php');
+            header('Location: ../../index.html');
             exit;
         } else {
             // Contraseña incorrecta
