@@ -7,38 +7,6 @@
   <link rel="stylesheet" href="../css/header_y_footer.css">
   <link rel="stylesheet" href="../css/articulo.css">
   <title>CBS Glup Glup</title>
-  <script>
-    function checkSessionAndReserve() {
-        const selectedActivity = document.getElementById("activitySelect").value;
-        const sessionCookie = getCookie('session');
-
-        if (!sessionCookie) {
-            alert('Por favor, inicie sesión para continuar.');
-            window.location.href = '../gestor_reservas/auth/login.php';  // Cambia 'login.html' al archivo de inicio de sesión adecuado
-            return false;
-        }
-
-        // Crear un formulario temporal para enviar los datos
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'reserva.php';
-
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'actividad';
-        input.value = selectedActivity;
-
-        form.appendChild(input);
-        document.body.appendChild(form);
-        form.submit();
-    }
-
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-</script>
 </head>
 <body>
   <!--HEADER-->
@@ -96,15 +64,12 @@
           </tr>
         </tbody>
       </table>
-      <form onsubmit="return checkSessionAndReserve();">
-        <label for="activitySelect">Selecciona una actividad:</label>
-        <select id="activitySelect" name="actividad">
-            <option value="bautizo1">Bautizo Largo</option>
-            <option value="bautizo2">Bautizo Corto</option>
-            <!-- Agrega más opciones según sea necesario -->
-        </select>
-        <button type="submit">Reservar</button>
-    </form>
+      <label for="number">Tipo de Bautizo</label>
+      <select name="actividades" id="tipo_actividad" required>
+        <option value="javascript">Bautizo Largo (5h) 55€</option>
+        <option value="corto">Bautizo Corto (2.5h) 35€</option>
+      </select>
+      <a href="../gestor_reservas/reserva.php" id="carro">Reserva</a>
     </div>
   </main>
 
