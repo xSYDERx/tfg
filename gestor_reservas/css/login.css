@@ -42,3 +42,7 @@
 .login-container input[type="submit"]:hover {
     background-color: #00bfff;
 }
+
+h1 {
+    color: white !important;
+}
