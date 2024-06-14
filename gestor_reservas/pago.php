@@ -93,26 +93,27 @@ $conexion->close();
     <?php if (isset($mensaje_error)) : ?>
         <p style="color: red;"><?php echo $mensaje_error; ?></p>
     <?php endif; ?>
-
+<div class="login-container">
     <form method="post" action="">
         <!-- Agrega un campo oculto para la referencia -->
         <input type="hidden" name="referencia" value="<?php echo isset($_GET['ref']) ? $_GET['ref'] : ''; ?>">
-
+        
         <!-- Agrega aquí los campos para la información de la tarjeta -->
         <label for="titular">Nombre del Titular:</label>
         <input type="text" name="titular" required><br>
-
+        
         <label for="numero">Número de Tarjeta:</label>
         <input type="text" name="numero" required><br>
-
+        
         <label for="cvv">CVV:</label>
         <input type="text" name="cvv" required><br>
-
+        
         <label for="caducidad">Fecha de Caducidad:</label>
         <input type="text" name="caducidad" required><br>
-
+        
         <input type="submit" value="Pagar">
     </form>
+</div>
 
     <footer>
         <section id="fotos_footer">
