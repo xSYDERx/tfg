@@ -85,4 +85,45 @@
     align-items: center;
   }
 
+  #conoce{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #instructor {
+    padding: 2%;
+  }
+
+@media screen and (min-width: 900px){
+  
+  #instructor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 100%;
+    padding: 2%;
+  }
+
+
+  #instructor p {
+    font-size: 1.1em;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  }
+  
+  #foto_jose {
+    width: 50%;
+    height: auto;
+    justify-self: center;
+    border-radius: 10px;
+  }
   
