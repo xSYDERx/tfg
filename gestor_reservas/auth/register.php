@@ -46,6 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/header_y_footer.css">
 </head>
 
 <body>
@@ -73,20 +75,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </header>
             <?php echo $mensaje; ?>
             <div class="register-container">
-        <h1>Registro</h1>
-        <form action="" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" required>
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" name="apellidos" required>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" name="email" required>
-            <label for="login">Login:</label>
-            <input type="text" name="login" required>
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" required>
-            <input type="submit" value="Registrar">
-        </form>
+                <h1>Registro</h1>
+                <form action="" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" required>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" required>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" name="email" required>
+                    <label for="login">Login:</label>
+                    <input type="text" name="login" required>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" required>
+                    <input type="submit" value="Registrar">
+                </form>
+                <p>¿Ya eres parte del club? <a href="./login.php">¡Inicia sesión!</a></p>
+            </div>
     <footer>
         <section id="fotos_footer">
           <img src="" alt="">
