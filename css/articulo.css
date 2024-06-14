@@ -52,6 +52,17 @@ body > div h2 {
   cursor: pointer;
 }
 
+#disponemos {
+  margin: 0;
+}
+
+#tipo {
+  display: flex;
+  gap: 40px;
+  margin: 3%;
+  font-size: 1.2em;
+}
+
 /*-----------------------------*/
 
 @media screen and (min-width: 901px) {
@@ -64,7 +75,8 @@ body > div h2 {
 
   #text {
     width: 60%;
-    padding: 0;
+    padding: 5%;
+    padding-top: 0;
   }
 
   #text img {
@@ -73,10 +85,59 @@ body > div h2 {
   }
 
   #compra {
-    width: 35%;
-    padding: 0;
+    width: 40%;
+    padding: 5%;
     margin-top: 20px;
   }
+
+
 }
 
 /*-----------------------------*/
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #003572;
+  color: white;
+}
+
+/* Desplegable */
+#description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+#description.show {
+  max-height: 500px; /* Ajusta este valor según el contenido */
+  opacity: 1;
+}
+
+#toggleButton {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #003572;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#toggleButton:hover {
+  background-color: #00234a;
+}

@@ -35,23 +35,28 @@
     <div id="text">
       <h2>Bautizos</h2>
       <img src="../assets/img/Caballito.jpg" alt="">
-      <p>¿Cuando ves un documental de submarinismo no te quedas muchas veces ensimismado viendo las maravillas que se esconden bajo el agua?.</p>
-      <p>Imagínate lo que es vivirlo y compartir el habitat de todas estas maravillosas criaturas, sentirte ingravido y volar sobre el lecho marino.</p>
-      <p>Por su puesto que si que puedes, tu y todo el mundo. Con los instructores y monitores del club descubrirás el apasionante mundo subacático. Por un precio muy reducido puedes probar este apasionante deporte, que por otro lado estamos seguros que no te va a gustar, ¡te va a fascinar!</p>
-      <p>Desgraciadamente una vez que lo pruebes esto no tiene marcha atrás. Te vas a quedar enganchado, todos los que practicamos este deporte lo podemos corroborar...</p>
-      <p>En este curso aprenderás las nociones básicas de seguridad y técnicas de buceo, así como las nociones básicas de la teoría del buceo. Además, podrás disfrutar de una experiencia única en la que podrás ver la vida marina desde una perspectiva diferente.</p>
+      <button id="toggleButton">Mostrar descripción</button>
+      <div id="description" class="hidden">
+        <p>¿Cuando ves un documental de submarinismo no te quedas muchas veces ensimismado viendo las maravillas que se esconden bajo el agua?.</p>
+        <p>Imagínate lo que es vivirlo y compartir el habitat de todas estas maravillosas criaturas, sentirte ingravido y volar sobre el lecho marino.</p>
+        <p>Por su puesto que si que puedes, tu y todo el mundo. Con los instructores y monitores del club descubrirás el apasionante mundo subacático. Por un precio muy reducido puedes probar este apasionante deporte, que por otro lado estamos seguros que no te va a gustar, ¡te va a fascinar!</p>
+        <p>Desgraciadamente una vez que lo pruebes esto no tiene marcha atrás. Te vas a quedar enganchado, todos los que practicamos este deporte lo podemos corroborar...</p>
+        <p>En este curso aprenderás las nociones básicas de seguridad y técnicas de buceo, así como las nociones básicas de la teoría del buceo. Además, podrás disfrutar de una experiencia única en la que podrás ver la vida marina desde una perspectiva diferente.</p>
+      </div>
     </div>
 
     <div id="compra">
       <h2>Compra tu bautizo</h2>
-      <p>Diseponemos de dos tipos:</p>
+      <p id="disponemos">Diseponemos de dos tipos:</p>
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>Tipo</td>
-            <td>Duración</td>
-            <td>Precio</td>
+            <th>Tipo</th>
+            <th>Duración</th>
+            <th>Precio</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>Bautizo Largo</td>
             <td>5 horas</td>
@@ -64,11 +69,13 @@
           </tr>
         </tbody>
       </table>
-      <label for="number">Tipo de Bautizo</label>
-      <select name="actividades" id="tipo_actividad" required>
-        <option value="javascript">Bautizo Largo (5h) 55€</option>
-        <option value="corto">Bautizo Corto (2.5h) 35€</option>
-      </select>
+      <div id="tipo">
+        <label for="number">Tipo de Bautizo</label>
+        <select name="actividades" id="tipo_actividad" required>
+          <option value="largo">Bautizo Largo (5h) 55€</option>
+          <option value="corto">Bautizo Corto (2.5h) 35€</option>
+        </select>
+      </div>
       <a href="../gestor_reservas/reserva.php" id="carro">Reserva</a>
     </div>
   </main>
@@ -102,5 +109,6 @@
 
   <script src="../js/gotopbutton.js"></script>
   <script src="../js/burgermenu.js"></script>
+  <script src="../js/toggleDescription.js"></script>
 </body>
 </html>
