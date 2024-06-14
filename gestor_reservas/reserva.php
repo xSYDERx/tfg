@@ -98,6 +98,7 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
     <link rel="stylesheet" href="../css/header_y_footer.css">
     <title>CBS Glup Glup</title>
 </head>
+<body>
 <header>
             <button id="menuButton"><img src="../assets/svg/blue_bg_menu.svg" alt=""></button>
             <div>
@@ -119,38 +120,39 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
             </ul>
             </nav>
             </header>
-<body>
-    <h1>Reserva</h1>
+            <main>
 
-    <?php if (isset($mensaje_exito)) : ?>
-        <p style="color: green;"><?php echo $mensaje_exito; ?></p>
-    <?php endif; ?>
-
-    <?php if (isset($mensaje_error)) : ?>
-        <p style="color: red;"><?php echo $mensaje_error; ?></p>
-    <?php endif; ?>
-
-    <form method="post" action="">
-    <label for="fecha_reserva">Fecha de Reserva:</label>
-    <input type="date" name="fecha_reserva" required><br>
-
-    <!-- Añadir campo para mostrar tipo de servicio -->
-    <label for="tipo_servicio">Tipo de Servicio:</label>
-    <select name="tipo_servicio" required>
-        <?php
+                <h1>Reserva</h1>
+                
+                <?php if (isset($mensaje_exito)) : ?>
+                    <p style="color: green;"><?php echo $mensaje_exito; ?></p>
+                    <?php endif; ?>
+                    
+                    <?php if (isset($mensaje_error)) : ?>
+                        <p style="color: red;"><?php echo $mensaje_error; ?></p>
+                        <?php endif; ?>
+                        
+                        <form method="post" action="">
+                            <label for="fecha_reserva">Fecha de Reserva:</label>
+                            <input type="date" name="fecha_reserva" required><br>
+                            
+                            <!-- Añadir campo para mostrar tipo de servicio -->
+                            <label for="tipo_servicio">Tipo de Servicio:</label>
+                            <select name="tipo_servicio" required>
+                                <?php
         // Conectar a la base de datos
         require_once './config/config.php';
         $conexion = new mysqli(HOST, USUARIO, PASSWORD, BASEDATOS, PUERTO);
-
+        
         // Verificar la conexión
         if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
         }
-
+        
         // Consultar tipos de servicio desde la base de datos
         $query_servicios = "SELECT id_servicio, nombre, descripcion, precio FROM servicio";
         $result_servicios = $conexion->query($query_servicios);
-
+        
         if ($result_servicios && $result_servicios->num_rows > 0) {
             while ($servicio = $result_servicios->fetch_assoc()) {
                 echo "<option value='{$servicio['id_servicio']}'>{$servicio['nombre']} - {$servicio['descripcion']} - {$servicio['precio']} €</option>";
@@ -158,19 +160,20 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
         } else {
             echo "<option value='' disabled>No hay servicios disponibles</option>";
         }
-
+        
         // Cerrar la conexión
         $conexion->close();
         ?>
     </select><br>
-
+    
     <input type="submit" name="realizar_pago" value="Realizar el pago">
     <input type="submit" name="reservar_sin_pago" value="Reservar sin realizar el pago">
 </form>
+</main>
 <footer>
-        <section id="fotos_footer">
-          <img src="" alt="">
-          <div id="logos">
+    <section id="fotos_footer">
+        <img src="" alt="">
+        <div id="logos">
             <img src="../assets/img/instructor_trainer-removebg-preview.png" alt="logo acuc">
             <img src="../assets/img/Cressi_pittogramma_neg.png" alt="logo cressi">
           </div>

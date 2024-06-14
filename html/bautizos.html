@@ -10,11 +10,11 @@
   <script>
     function checkSessionAndReserve() {
         const selectedActivity = document.getElementById("activitySelect").value;
-        const sessionCookie = document.cookie.split('; ').find(row => row.startsWith('session='));
+        const sessionCookie = getCookie('session');
 
         if (!sessionCookie) {
             alert('Por favor, inicie sesión para continuar.');
-            window.location.href = '../gestor_reservas/auth/login.php';  // Cambia 'login.html' al archivo de inicio de sesión adecuado
+            window.location.href = 'login.html';  // Cambia 'login.html' al archivo de inicio de sesión adecuado
             return false;
         }
 
@@ -31,6 +31,12 @@
         form.appendChild(input);
         document.body.appendChild(form);
         form.submit();
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
     }
 </script>
 </head>
@@ -91,14 +97,14 @@
         </tbody>
       </table>
       <form onsubmit="return checkSessionAndReserve();">
-            <label for="activitySelect">Selecciona una actividad:</label>
-            <select id="activitySelect" name="actividad">
-                <option value="bautizo1">Bautizo Largo</option>
-                <option value="bautizo2">Bautizo Corto</option>
-                <!-- Agrega más opciones según sea necesario -->
-            </select>
-            <button type="submit">Reservar</button>
-        </form>
+        <label for="activitySelect">Selecciona una actividad:</label>
+        <select id="activitySelect" name="actividad">
+            <option value="bautizo1">Bautizo Largo</option>
+            <option value="bautizo2">Bautizo Corto</option>
+            <!-- Agrega más opciones según sea necesario -->
+        </select>
+        <button type="submit">Reservar</button>
+    </form>
     </div>
   </main>
 
