@@ -17,38 +17,38 @@
                         
                         
                         
-                        <!--HEADER-->
-                        <header>
-                            <button id="menuButton"><img src="../assets/svg/blue_bg_menu.svg" alt=""></button>
-                            <div>
-                                <a href="../index.html" id="club_a">
-                                    <img src="../assets/img/logo_cbs.png" alt="Logo club" id="logo_club">
-                                    </a>
-                                    </div>
-                                    <nav id="mainMenu">
-                                        <ul>
-                                            <li><a href="../index.html">Inicio</a></li>
-                                            <li><a href="../html/who.html">El club</a></li>
-                                            <li><a href="../html/galeria.html">Galería</a>
-                                            </li>
-                                            <li><a href="../html/tienda.html">Tienda</a>
-                                            </li>
-                                            <li><a href="../html/contacto.html">Contacto</a></li>
-                                            <li><a href="../html/actividades.html">Realiza tu reserva</a></li>
-                                            <li id="user"><a href="">Inicio de sesión</a></li>
-                                            </ul>
-                                            </nav>
-                                            </header>
-                                            <!--HEADER-->
-                                            <main>
-                                                <a href="./auth/login.php">Iniciar Sesion</a>
-                                                <a href="./auth/register.php">Registrarse</a>
-                                            <a href="./auth/loginadmin.php"><img src="./img/engine.png" alt="Inicio de sesion para administradores"></a>
-                                            
-                                                </main>
-                                                <!--FOOTER-->
-                                                <footer>
-                                                    <section id="fotos_footer">
+            <!--HEADER-->
+            <header>
+            <button id="menuButton"><img src="../assets/svg/blue_bg_menu.svg" alt=""></button>
+            <div>
+            <a href="../index.html" id="club_a">
+            <img src="../assets/img/logo_cbs.png" alt="Logo club" id="logo_club">
+            </a>
+            </div>
+            <nav id="mainMenu">
+            <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/who.html">El club</a></li>
+            <li><a href="../html/galeria.html">Galería</a>
+            </li>
+            <li><a href="../html/tienda.html">Tienda</a>
+            </li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+            <li><a href="../html/actividades.html">Realiza tu reserva</a></li>
+            <li id="user"><a href="">Inicio de sesión</a></li>
+            </ul>
+            </nav>
+            </header>
+            <!--HEADER-->
+            <main>
+                <a href="./auth/login.php">Iniciar Sesion</a>
+                <a href="./auth/register.php">Registrarse</a>
+            <a href="./auth/loginadmin.php"><img src="./img/engine.png" alt="Inicio de sesion para administradores"></a>
+        
+        </main>
+        <!--FOOTER-->
+        <footer>
+        <section id="fotos_footer">
           <img src="" alt="">
           <div id="logos">
             <img src="../assets/img/instructor_trainer-removebg-preview.png" alt="logo acuc">
