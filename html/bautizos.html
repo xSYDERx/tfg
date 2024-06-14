@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header_y_footer.css">
+  <link rel="stylesheet" href="../css/articulo.css">
+  <title>CBS Glup Glup</title>
+  <script>
+    function checkSessionAndReserve() {
+        const selectedActivity = document.getElementById("activitySelect").value;
+        const sessionCookie = document.cookie.split('; ').find(row => row.startsWith('session='));
+
+        if (!sessionCookie) {
+            alert('Por favor, inicie sesión para continuar.');
+            window.location.href = 'login.html';  // Cambia 'login.html' al archivo de inicio de sesión adecuado
+            return false;
+        }
+
+        // Crear un formulario temporal para enviar los datos
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'reserva.php';
+
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'actividad';
+        input.value = selectedActivity;
+
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
+</head>
+<body>
+  <!--HEADER-->
+  <header>
+    <button id="menuButton"><img src="../assets/svg/blue_bg_menu.svg" alt=""></button>
+    <div>
+      <a href="../index.html" id="club_a">
+        <img src="../assets/img/logo_cbs.png" alt="Logo club" id="logo_club">
+      </a>
+    </div>
+    <nav id="mainMenu">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./who.html">El club</a></li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./tienda.html">Tienda</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./actividades.html">Realiza tu reserva</a></li>
+        <li id="user"><a href="../gestor_reservas/auth/login.php">Inicio de sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--HEADER-->
+
+  <main id="mainContent">
+    <div id="text">
+      <h2>Bautizos</h2>
+      <img src="../assets/img/Caballito.jpg" alt="">
+      <p>¿Cuando ves un documental de submarinismo no te quedas muchas veces ensimismado viendo las maravillas que se esconden bajo el agua?.</p>
+      <p>Imagínate lo que es vivirlo y compartir el habitat de todas estas maravillosas criaturas, sentirte ingravido y volar sobre el lecho marino.</p>
+      <p>Por su puesto que si que puedes, tu y todo el mundo. Con los instructores y monitores del club descubrirás el apasionante mundo subacático. Por un precio muy reducido puedes probar este apasionante deporte, que por otro lado estamos seguros que no te va a gustar, ¡te va a fascinar!</p>
+      <p>Desgraciadamente una vez que lo pruebes esto no tiene marcha atrás. Te vas a quedar enganchado, todos los que practicamos este deporte lo podemos corroborar...</p>
+      <p>En este curso aprenderás las nociones básicas de seguridad y técnicas de buceo, así como las nociones básicas de la teoría del buceo. Además, podrás disfrutar de una experiencia única en la que podrás ver la vida marina desde una perspectiva diferente.</p>
+    </div>
+
+    <div id="compra">
+      <h2>Compra tu bautizo</h2>
+      <p>Diseponemos de dos tipos:</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>Tipo</td>
+            <td>Duración</td>
+            <td>Precio</td>
+          </tr>
+          <tr>
+            <td>Bautizo Largo</td>
+            <td>5 horas</td>
+            <td>55€</td>
+          </tr>
+          <tr>
+            <td>Bautizo Corto</td>
+            <td>2 horas y media</td>
+            <td>35€</td>
+          </tr>
+        </tbody>
+      </table>
+      <form onsubmit="return checkSessionAndReserve();">
+            <label for="activitySelect">Selecciona una actividad:</label>
+            <select id="activitySelect" name="actividad">
+                <option value="bautizo1">Bautizo Largo</option>
+                <option value="bautizo2">Bautizo Corto</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+  </main>
+
+  <!--FOOTER-->
+  <footer>
+    <section id="fotos_footer">
+      <img src="" alt="">
+      <div id="logos">
+        <img src="../assets/img/instructor_trainer-removebg-preview.png" alt="logo acuc">
+        <img src="../assets/img/Cressi_pittogramma_neg.png" alt="logo cressi">
+      </div>
+    </section>
+    <section>
+      <h2 id="redes_title">Nuestras Redes sociales</h2>
+      <div id="redes">
+        <a href="https://www.youtube.com/@JoseGlup"><img src="../assets/svg/youtube-svgrepo-com.svg" alt="youtube"></a>
+        <a href="https://www.instagram.com/cbsglupglup/"><img src="../assets/svg/Instagram_logo_2016.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/cbglupglup"><img src="../assets/svg/Facebook_f_logo_(2019).svg" alt="facebook"></a>
+        <a href="https://www.tiktok.com/@cbsglupglup?lang=es"><img src="../assets/svg/tiktok-logo-logo-svgrepo-com.svg" alt="tiktok"></a>
+      </div>
+    </section>
+    <div id="legal">
+      <a href="./cookies.html">Política de cookies</a>
+      <a href="./legal.html">Aviso legal</a>
+      <a href="./privacidad.html">Política de privacidad</a>
+    </div>
+    <p>© 2024 CBS Glup Glup</p>
+  </footer>
+  <button id="scrollToTopBtn">&#8679;</button>
+
+  <script src="../js/gotopbutton.js"></script>
+  <script src="../js/burgermenu.js"></script>
+</body>
+</html>
