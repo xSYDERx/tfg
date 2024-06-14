@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['referencia'])) {
 
 if (isset($mensaje_exito)) {
     // Agrega una redirección después de 3 segundos
-    echo '<meta http-equiv="refresh" content="3;url=./auth/secure.php">';
+    echo '<meta http-equiv="refresh" content="3;url=./exito.html">';
 }
 
 // Cerrar la conexión
