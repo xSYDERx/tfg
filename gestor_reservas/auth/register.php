@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conexion->query($query) === TRUE) {
         $mensaje = "Usuario registrado exitosamente.";
         // Redireccionar al index después de registrar el usuario
-        header("Location: ../index.php");
+        header("Location: ./login.php");
         exit();
     } else {
         $mensaje = "Error al registrar el usuario: " . $conexion->error;

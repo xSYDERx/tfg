@@ -3,7 +3,7 @@ session_start();
 
 // Verificar si el usuario ya está autenticado
 if (isset($_SESSION['login'])) {
-    header('Location: secure.php');
+    header('Location: ../../index.html');
     exit;
 }
 
