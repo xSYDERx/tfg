@@ -102,10 +102,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <section>
             <h2 id="redes_title">Nuestras Redes sociales</h2>
             <div id="redes">
-              <a href="https://www.youtube.com/@JoseGlup"><img src="../assets/svg/youtube-svgrepo-com.svg" alt="youtube"></a>
-              <a href="https://www.instagram.com/cbsglupglup/"><img src="../assets/svg/Instagram_logo_2016.svg" alt="instagram"></a>
-              <a href="https://www.facebook.com/cbglupglup"><img src="../assets/svg/Facebook_f_logo_(2019).svg" alt="facebook"></a>
-              <a href="https://www.tiktok.com/@cbsglupglup?lang=es"><img src="../assets/svg/tiktok-logo-logo-svgrepo-com.svg" alt="tiktok"></a>
+              <a href="https://www.youtube.com/@JoseGlup"><img src="../../assets/svg/youtube-svgrepo-com.svg" alt="youtube"></a>
+              <a href="https://www.instagram.com/cbsglupglup/"><img src="../../assets/svg/Instagram_logo_2016.svg" alt="instagram"></a>
+              <a href="https://www.facebook.com/cbglupglup"><img src="../../assets/svg/Facebook_f_logo_(2019).svg" alt="facebook"></a>
+              <a href="https://www.tiktok.com/@cbsglupglup?lang=es"><img src="../../assets/svg/tiktok-logo-logo-svgrepo-com.svg" alt="tiktok"></a>
             </div>
           </section>
           <div id="legal">
