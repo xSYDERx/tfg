@@ -1,8 +1,106 @@
 main {
-    
+    line-height: 1.6em;
+}
+
+main > div {
+    padding: 5%;
+    padding-top: 2%;
 }
 
 img {
     width: 100%;
     padding: 0;
+    border-radius: 10px;
+}
+
+#ofrecemos {
+    margin-bottom: 5%;
+    margin-top: 5%;    
+}
+
+#logocbs {
+    width: 50%;
+    padding: 0;
+}
+
+#volar {
+    background-image: url(../assets/img/1313167291.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 18.7%;
+    background-size:100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 382px;
+  }
+  #volar p {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 650;
+    text-align: center;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media screen and (min-width: 900px) {
+    p {
+        font-size: 1.2em;
+    }
+    
+    #index_overlay {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #index_overlay h2 {
+        width: 50%;
+        background-color: white;
+
+    }
+
+    #index_overlay img {
+        max-width: 50%;
+        height: auto;
+        order: 2;
+        flex-shrink: 0;
+    }
+    
+    #index_overlay p {
+        width: 80%;
+        padding: 10%;
+        padding-bottom: 5%;
+    }
+
+    #index_overlay_2 {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    #index_overlay_2 img {
+        max-width: 50%;
+        height: auto;
+        order: 1; 
+        flex-shrink: 0;
+    }
+    
+    #index_overlay_2 > div {
+        width: 50%; 
+        padding: 0 20px; 
+        box-sizing: border-box; 
+        order: 2; 
+    }
+    
+    #index_overlay_2 p {
+        padding-bottom: 10px; 
+    }
+    
+    #index_overlay_2 .boton {
+        margin-top: 10px; 
+    }
 }
