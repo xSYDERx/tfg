@@ -54,9 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fecha_reserva'])) {
             if ($conexion->query($insert_query) === TRUE) {
                 // Redirigir según el botón presionado
                 if (isset($_POST['realizar_pago'])) {
-                    header("Location: pago.php?ref=$referencia");
+                    header("Location: ./exito.html");
                 } elseif (isset($_POST['reservar_sin_pago'])) {
-                    header("Location: ./auth/secure.php");
+                    header("Location: ./exito.html");
                 }
                 exit;
             } else {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header_y_footer.css">
+  <title>CBS Glup Glup</title>
+</head>
+<style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0; /* Color de fondo opcional */
+    }
+
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    </style>
+<body>
+    <div>
+      <h1>RESERVA REALIZADA CON ÉXITO!</h1>
+      <h2>Le redirigiremos en unos instantes a la página principal</h2>
+    </div>
+  
+    <script>
+      setTimeout(function() {
+        window.location.href = "../index.html"; // Redirigir al index.html después de 3 segundos
+      }, 3000); // 3000 milisegundos = 3 segundos
+    </script>
+  </body>
+</html>
