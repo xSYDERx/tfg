@@ -130,7 +130,7 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
                 
                 <!-- Añadir campo para mostrar tipo de servicio -->
                 <label for="tipo_servicio">Tipo de Servicio:</label>
-                <select name="tipo_servicio" required>
+                <select name="tipo_servicio" required style="width: 150px;">
                     <?php
         // Conectar a la base de datos
         require_once './config/config.php';
@@ -158,7 +158,7 @@ function generar_referencia_unica($id_servicio, $fecha_reserva) {
         ?>
     </select><br>
     
-    <input type="submit" name="realizar_pago" value="Realizar el pago">
+    <input type="submit" name="realizar_pago" value="Realizar el pago" style="margin-bottom: 5%;">
     <input type="submit" name="reservar_sin_pago" value="Reservar sin realizar el pago">
 </form>
 </div>
